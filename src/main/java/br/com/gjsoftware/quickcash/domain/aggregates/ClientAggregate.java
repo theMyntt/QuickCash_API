@@ -6,6 +6,7 @@ import br.com.gjsoftware.quickcash.domain.models.Documents;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 public class ClientAggregate {
@@ -31,6 +32,9 @@ public class ClientAggregate {
             Documents documents,
             Address address
     ) {
+        UUID uuid = UUID.randomUUID();
+
+        this._id = uuid.toString();
         this.name = name;
         this.email = email;
         this.password = password;
