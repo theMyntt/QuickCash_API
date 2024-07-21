@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -23,6 +25,7 @@ public class Client {
     private String password;
     private double Money;
     private Gender gender;
+    private Date birthDate;
     private Documents documents;
     private Address address;
 }
