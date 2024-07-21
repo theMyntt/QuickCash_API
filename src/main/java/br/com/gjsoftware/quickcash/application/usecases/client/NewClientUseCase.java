@@ -1,5 +1,6 @@
 package br.com.gjsoftware.quickcash.application.usecases.client;
 
+import br.com.gjsoftware.quickcash.application.exceptions.ConflictException;
 import br.com.gjsoftware.quickcash.core.IUseCaseService;
 import br.com.gjsoftware.quickcash.core.StandardResponse;
 import br.com.gjsoftware.quickcash.domain.aggregates.ClientAggregate;
@@ -22,6 +23,12 @@ public class NewClientUseCase implements IUseCaseService<NewClientDTO, StandardR
 
     @Override
     public ResponseEntity<StandardResponse> run(NewClientDTO dto) {
+        Client exists = repository.findBy(dto.getEmail());
+
+        if (exists != null) {
+            throw new ConflictException("User already exists");
+        }
+
         ClientAggregate aggregate = new ClientAggregate(
                 dto.getName(),
                 dto.getEmail(),
