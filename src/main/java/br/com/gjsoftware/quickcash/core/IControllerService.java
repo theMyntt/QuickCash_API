@@ -1,5 +1,7 @@
 package br.com.gjsoftware.quickcash.core;
 
+import org.springframework.http.ResponseEntity;
+
 public interface IControllerService<Input, Output> {
-    Output perform(Input dto);
+    ResponseEntity<Output> perform(Input dto);
 }

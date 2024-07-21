@@ -1,5 +1,7 @@
 package br.com.gjsoftware.quickcash.core;
 
+import org.springframework.http.ResponseEntity;
+
 public interface IUseCaseService<Input, Output> {
-    Output run(Input dto);
+    ResponseEntity<Output> run(Input dto);
 }
