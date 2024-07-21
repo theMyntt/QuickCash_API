@@ -2,6 +2,7 @@ package br.com.gjsoftware.quickcash.domain.models;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,9 +23,11 @@ public class Address {
 
     @NotNull(message = "Country should be not null")
     @NotEmpty(message = "Country should be not empty")
+    @Size(max = 2)
     private String country;
 
     @NotNull(message = "State should be not null")
     @NotEmpty(message = "State should be not empty")
+    @Size(max = 2)
     private String state;
 }
