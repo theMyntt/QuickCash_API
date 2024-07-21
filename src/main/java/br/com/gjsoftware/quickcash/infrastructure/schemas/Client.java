@@ -23,7 +23,7 @@ public class Client {
     private String name;
     private String email;
     private String password;
-    private double Money;
+    private double money;
     private Gender gender;
     private Date birthDate;
     private Documents documents;
