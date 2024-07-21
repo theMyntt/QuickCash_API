@@ -1,0 +1,21 @@
+POST http://localhost:8080/api/client/new/
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "securePassword123",
+  "gender": "MALE",
+  "birthDate": "1990-01-01T00:00:00Z",
+  "documents": {
+    "cpf": "12345678901",
+    "rg": "123456789",
+    "state": "SP"
+  },
+  "address": {
+    "street": "123 Main St",
+    "zipCode": "12345-678",
+    "country": "BR",
+    "state": "SP"
+  }
+}
