@@ -28,4 +28,6 @@ public class Client {
     private Date birthDate;
     private Documents documents;
     private Address address;
+    private Date createdAt;
+    private Date updatedAt;
 }
