@@ -3,7 +3,9 @@ package br.com.gjsoftware.quickcash.infrastructure.repositories;
 import br.com.gjsoftware.quickcash.core.IMapperService;
 import br.com.gjsoftware.quickcash.domain.aggregates.ClientAggregate;
 import br.com.gjsoftware.quickcash.infrastructure.schemas.Client;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ClientMapper implements IMapperService<ClientAggregate, Client> {
     @Override
     public ClientAggregate toDomain(Client target) {
