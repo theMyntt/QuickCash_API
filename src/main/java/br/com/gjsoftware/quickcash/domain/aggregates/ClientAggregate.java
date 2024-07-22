@@ -70,4 +70,30 @@ public class ClientAggregate extends AggregateRoot {
         this.createdAt = createdAt;
         this.updatedAt = new Date();
     }
+
+    public ClientAggregate(
+            String _id,
+            String name,
+            String email,
+            String password,
+            double money,
+            EGender gender,
+            Date birthDate,
+            Documents documents,
+            Address address,
+            Date createdAt,
+            Date updatedAt
+    ) {
+        this._id = _id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.money = money;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.documents = documents;
+        this.address = address;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 }
