@@ -1,16 +1,18 @@
 package br.com.gjsoftware.quickcash.domain.aggregates;
 
+import br.com.gjsoftware.quickcash.core.AggregateRoot;
 import br.com.gjsoftware.quickcash.domain.enums.Gender;
 import br.com.gjsoftware.quickcash.domain.models.Address;
 import br.com.gjsoftware.quickcash.domain.models.Documents;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 import java.util.UUID;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class ClientAggregate {
-    private String _id;
+public class ClientAggregate extends AggregateRoot {
     private String name;
     private String email;
     private String password;
@@ -19,8 +21,6 @@ public class ClientAggregate {
     private Date birthDate;
     private Documents documents;
     private Address address;
-    private Date createdAt;
-    private Date updatedAt;
 
     public ClientAggregate(
             String name,
