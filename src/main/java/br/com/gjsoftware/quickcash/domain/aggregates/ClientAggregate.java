@@ -2,7 +2,7 @@ package br.com.gjsoftware.quickcash.domain.aggregates;
 
 import br.com.gjsoftware.quickcash.application.utils.Utils;
 import br.com.gjsoftware.quickcash.core.AggregateRoot;
-import br.com.gjsoftware.quickcash.domain.enums.Gender;
+import br.com.gjsoftware.quickcash.domain.enums.EGender;
 import br.com.gjsoftware.quickcash.domain.models.Address;
 import br.com.gjsoftware.quickcash.domain.models.Documents;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class ClientAggregate extends AggregateRoot {
     private String email;
     private String password;
     private double money;
-    private Gender gender;
+    private EGender gender;
     private Date birthDate;
     private Documents documents;
     private Address address;
@@ -28,7 +28,7 @@ public class ClientAggregate extends AggregateRoot {
             String email,
             String password,
             double money,
-            Gender gender,
+            EGender gender,
             Date birthDate,
             Documents documents,
             Address address
@@ -52,7 +52,7 @@ public class ClientAggregate extends AggregateRoot {
             String email,
             String password,
             double money,
-            Gender gender,
+            EGender gender,
             Date birthDate,
             Documents documents,
             Address address,

@@ -1,6 +1,6 @@
 package br.com.gjsoftware.quickcash.infrastructure.dtos.client;
 
-import br.com.gjsoftware.quickcash.domain.enums.Gender;
+import br.com.gjsoftware.quickcash.domain.enums.EGender;
 import br.com.gjsoftware.quickcash.domain.models.Address;
 import br.com.gjsoftware.quickcash.domain.models.Documents;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -42,7 +42,7 @@ public class NewClientDTO {
     private Date birthDate;
 
     @NotNull(message = "Gender should be not null")
-    private Gender gender;
+    private EGender gender;
 
     @NotNull(message = "Documents should be not null")
     private Documents documents;

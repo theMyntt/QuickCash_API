@@ -1,6 +1,6 @@
 package br.com.gjsoftware.quickcash.infrastructure.schemas;
 
-import br.com.gjsoftware.quickcash.domain.enums.Gender;
+import br.com.gjsoftware.quickcash.domain.enums.EGender;
 import br.com.gjsoftware.quickcash.domain.models.Address;
 import br.com.gjsoftware.quickcash.domain.models.Documents;
 import lombok.AllArgsConstructor;
@@ -24,7 +24,7 @@ public class Client {
     private String email;
     private String password;
     private double money;
-    private Gender gender;
+    private EGender gender;
     private Date birthDate;
     private Documents documents;
     private Address address;
