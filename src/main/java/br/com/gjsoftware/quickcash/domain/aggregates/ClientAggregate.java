@@ -1,5 +1,6 @@
 package br.com.gjsoftware.quickcash.domain.aggregates;
 
+import br.com.gjsoftware.quickcash.application.utils.Utils;
 import br.com.gjsoftware.quickcash.core.AggregateRoot;
 import br.com.gjsoftware.quickcash.domain.enums.Gender;
 import br.com.gjsoftware.quickcash.domain.models.Address;
@@ -32,9 +33,7 @@ public class ClientAggregate extends AggregateRoot {
             Documents documents,
             Address address
     ) {
-        UUID uuid = UUID.randomUUID();
-
-        this._id = uuid.toString();
+        this._id = Utils.UUID();
         this.name = name;
         this.email = email;
         this.password = password;
